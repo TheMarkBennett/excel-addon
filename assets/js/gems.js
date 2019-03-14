@@ -30,7 +30,6 @@ $('#gems-archive').fadeOut(500, function() {
 });
 
 
-
 	$.ajax({
 			 url: gems_ajax_object.ajax_url,
 			 type: 'post',
@@ -40,6 +39,8 @@ $('#gems-archive').fadeOut(500, function() {
            'slug': $term,
 			 },
 			 success: function( response ) {
+					 console.log(response);
 					 $('#gems-archive').append(response).hide().fadeIn(1000);
+			 },
 	 });
  }
