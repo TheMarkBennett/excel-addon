@@ -55,7 +55,7 @@
 
     while ($loop->have_posts()) { $loop->the_post(); ?>
 
-			<div class="post-<?php the_ID(); ?> gems-person col-12 col-sm-2 col-md-4 text-center">
+			<div class="post-<?php the_ID(); ?> gems-person col-12 col-sm-2 col-md-3 text-center">
         <?php the_post_thumbnail( 'thumbnail' ); ?>
         <p><?php the_title(); ?></p>
       </div>
