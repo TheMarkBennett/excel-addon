@@ -4,7 +4,7 @@ var $term = 'gems-2018';
 
 update_pages_on_change($term);
 
-$('.gems-past').on('click', 'li', function() {
+$('.gems-past').on('click', 'li a', function() {
      console.log($(this).attr('class'));
     $term = $(this).attr('class');
      update_pages_on_change($term);
