@@ -50,7 +50,7 @@
 
     } ?>
 
-			<div class="<?php the_ID(); ?>"><?php the_title(); ?></div>
+			<div class="post-<?php the_ID(); col ?> gems-person"><?php the_title(); ?></div>
 
       <?php  if($counter % 4 == 0){?>
       </div>
