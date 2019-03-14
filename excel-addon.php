@@ -39,6 +39,13 @@
     $args = array(
         'post_type' => 'person',
         'posts_per_page' => 12,
+        'tax_query' => array(
+            array (
+                'taxonomy' => 'people_group',
+                'field' => 'slug',
+                'terms' => 'gems-2018',
+                )
+            ),
     );
 
     $loop = new WP_Query($args);
@@ -50,7 +57,7 @@
 
 			<div class="post-<?php the_ID(); ?> gems-person col text-center">
         <?php the_post_thumbnail( 'thumbnail' ); ?>
-        <?php the_title(); ?>
+        <p><?php the_title(); ?></p>
       </div>
 
       <?php if (($counter + 1) % 4 == 0) {?>
