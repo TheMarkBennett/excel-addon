@@ -35,7 +35,7 @@
 
     $args = array(
         'post_type' => 'person',
-        'posts_per_page' => 12,
+        'posts_per_page' => 3,
     );
 
     $loop = new WP_Query($args);

@@ -28,7 +28,7 @@ function update_pages_on_change(){
 			 },
 			 success: function( response ) {
 					 console.log(response);
-					 $('#acf-field_5c710f16c0868').append(response)
+					 $('#gems-archive').append(response)
 			 },
 	 });
  }
