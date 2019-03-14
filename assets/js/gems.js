@@ -40,7 +40,7 @@ $('#gems-archive').fadeOut(500, function() {
 			 },
 			 success: function( response ) {
 					 console.log(response);
-					 $('#gems-archive').append(response).fadeIn(1000);
+					 $('#gems-archive').hide().append(response).fadeIn(1000);
 			 },
 	 });
  }
