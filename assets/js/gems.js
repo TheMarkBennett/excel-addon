@@ -25,7 +25,10 @@ function update_pages_on_change($term){
   var $post_type = 'person';
   //console.log(post_type); cpt_template-admin-js
 
-  $('#gems-archive').html('');
+$('#gems-archive').fadeOut(500, function() {
+   $(this).empty().show();
+});
+
 
 
 	$.ajax({
@@ -37,8 +40,6 @@ function update_pages_on_change($term){
            'slug': $term,
 			 },
 			 success: function( response ) {
-					 console.log(response);
-					 $('#gems-archive').append(response)
-			 },
+					 $('#gems-archive').append(response).hide().fadeIn(1000);
 	 });
  }
