@@ -38,7 +38,7 @@
 
     $args = array(
         'post_type' => 'person',
-        'posts_per_page' => 3,
+        'posts_per_page' => 12,
     );
 
     $loop = new WP_Query($args);
@@ -48,7 +48,10 @@
 
     while ($loop->have_posts()) { $loop->the_post(); ?>
 
-			<div class="post-<?php the_ID(); ?> gems-person col"><?php the_title(); ?></div>
+			<div class="post-<?php the_ID(); ?> gems-person col text-center">
+        <?php the_post_thumbnail( 'thumbnail' ); ?>
+        <?php the_title(); ?>
+      </div>
 
       <?php  if($counter % 4 == 0){?>
       </div>
