@@ -46,9 +46,7 @@
     <div class="row">
       <?php
 
-    while ($loop->have_posts()) { $loop->the_post();
-
-    } ?>
+    while ($loop->have_posts()) { $loop->the_post(); ?>
 
 			<div class="post-<?php the_ID(); col ?> gems-person"><?php the_title(); ?></div>
 
