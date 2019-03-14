@@ -25,7 +25,7 @@ function update_pages_on_change($term){
   var $post_type = 'person';
   //console.log(post_type); cpt_template-admin-js
 
-$('#gems-archive').fadeOut().delay(500).empty();
+$('#gems-archive').fadeOut(500).delay(500).empty();
 
 
 	$.ajax({
