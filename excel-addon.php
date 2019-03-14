@@ -33,7 +33,7 @@
         $post_type = $_POST["post_type"];
     header("Content-Type: text/html");
 
-    $counter = 1;
+    $counter = 0;
 
 
     $args = array(
@@ -58,6 +58,7 @@
         <div class="row">
 
 <?php
+$counter++;
 }
 
 }?>
