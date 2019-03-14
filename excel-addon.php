@@ -30,7 +30,7 @@
 
 
  function load_gems_ajax(){
-        $gems_term = $_POST["term"];
+        $gems_term = $_POST['slug'];
     header("Content-Type: text/html");
 
     $counter = 0;
