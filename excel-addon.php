@@ -29,7 +29,7 @@
  add_action('wp_enqueue_scripts', 'gems_enqueue_scripts'); //add javascript to the admin ares
 
 
- function more_post_ajax(){
+ function load_gems_ajax(){
         $post_type = $_POST["post_type"];
     header("Content-Type: text/html");
 
@@ -54,5 +54,5 @@
     exit;
 }
 
-add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
-add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_nopriv_load_gems_ajax', 'load_gems_ajax');
+add_action('wp_ajax_load_gems_ajax', 'load_gems_ajax');
