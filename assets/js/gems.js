@@ -20,10 +20,10 @@ function update_pages_on_change(){
   //console.log(post_type); cpt_template-admin-js
 
 	$.ajax({
-			 url: ajax_url.ajaxurl,
+			 url: gems_ajax_object.ajaxurl,
 			 type: 'post',
 			 data: {
-					 'action':'load_gems_ajax',
+					 'action':'more_post_ajax',
 					 'post_type': $post_type
 			 },
 			 success: function( response ) {
