@@ -33,17 +33,36 @@
         $post_type = $_POST["post_type"];
     header("Content-Type: text/html");
 
+    $counter = 1;
+
+
     $args = array(
         'post_type' => 'person',
         'posts_per_page' => 3,
     );
 
     $loop = new WP_Query($args);
-		ob_start();
-    while ($loop->have_posts()) { $loop->the_post();?>
+		ob_start();?>
+    <div class="row">
+      <?php
+
+    while ($loop->have_posts()) { $loop->the_post();
+
+    } ?>
+
 			<div class="<?php the_ID(); ?>"><?php the_title(); ?></div>
+
+      <?php  if($counter % 4 == 0){?>
+      </div>
+        <div class="row">
+
 <?php
-    }
+
+}?>
+
+</div>
+
+<?php
 
 		$posts_html = ob_get_contents(); // we pass the posts to variable
    		ob_end_clean(); // clear the buffer
