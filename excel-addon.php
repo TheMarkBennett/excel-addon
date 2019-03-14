@@ -19,7 +19,7 @@
  	wp_enqueue_script( 'gems_js', plugin_dir_url( __FILE__ ) . 'assets/js/gems.js', array(), '1.0.0', true );
    wp_localize_script('gems_js', 'gems_ajax_object',
       array(
-          'ajaxurl' => admin_url('admin-ajax.php'),
+          'ajax_url' => admin_url('admin-ajax.php'),
 
       )
  );
