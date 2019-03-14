@@ -20,7 +20,7 @@ $('.gems-past').on('click', 'li', function() {
 
 
 
-function update_pages_on_change(term){
+function update_pages_on_change($term){
 
   var $post_type = 'person';
   //console.log(post_type); cpt_template-admin-js
