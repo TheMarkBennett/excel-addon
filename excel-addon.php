@@ -56,7 +56,7 @@
       <?php if (($counter + 1) % 4 == 0) {?>
       </div>
         <div class="row">
-<?php}
+<?php }
 
 $counter++;
 
