@@ -43,7 +43,7 @@
 
     $loop = new WP_Query($args);
 		ob_start();?>
-    <div class="row">
+    <div class="row mb-3">
       <?php
 
     while ($loop->have_posts()) { $loop->the_post(); ?>
@@ -55,7 +55,7 @@
 
       <?php if (($counter + 1) % 4 == 0) {?>
       </div>
-        <div class="row">
+        <div class="row mb-3">
 <?php }
 
 $counter++;
