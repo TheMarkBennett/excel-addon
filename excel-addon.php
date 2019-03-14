@@ -33,7 +33,7 @@
         $post_type = $_POST["post_type"];
     header("Content-Type: text/html");
 
-    $counter = 0; 
+    $counter = 0;
 
 
     $args = array(
@@ -53,7 +53,7 @@
         <?php the_title(); ?>
       </div>
 
-      <?php  if($counter % 4 == 0){?>
+      <?php  if(($counter + 1) % 4 == 0){?>
       </div>
         <div class="row">
 <?php}
