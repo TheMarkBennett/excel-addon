@@ -53,7 +53,7 @@
         <?php the_title(); ?>
       </div>
 
-      <?php  if(($counter + 1) % 4 == 0){?>
+      <?php if (($counter + 1) % 4 == 0) {?>
       </div>
         <div class="row">
 <?php}
