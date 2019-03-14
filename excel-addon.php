@@ -7,3 +7,52 @@
  * Author: Mark Bennett
  * Author URI: https://excel.ucf.edu
  */
+
+
+ //include gems shortcode
+ include( plugin_dir_path( __FILE__ ) . 'include/gems-shortcode.php');
+
+
+ //Include ACF Javascript
+ function gems_enqueue_scripts() {
+
+ 	wp_enqueue_script( 'gems_js', plugin_dir_url( __FILE__ ) . 'assets/js/gems.js', array(), '1.0.0', true );
+   wp_localize_script('gems_js', 'ajax_url',
+      array(
+          'ajaxurl' => admin_url('admin-ajax.php'),
+
+      )
+ );
+
+ }
+
+ add_action('wp_enqueue_scripts', 'gems_enqueue_scripts'); //add javascript to the admin ares
+
+
+ function more_post_ajax(){
+        $post_type = $_POST["post_type"];
+    header("Content-Type: text/html");
+
+    $args = array(
+        'post_type' => 'person',
+        'posts_per_page' => 12,
+    );
+
+    $loop = new WP_Query($args);
+		ob_start();
+    while ($loop->have_posts()) { $loop->the_post();?>
+			<div class="<?php the_ID(); ?>"><?php the_title(); ?></div>
+<?php
+    }
+
+		$posts_html = ob_get_contents(); // we pass the posts to variable
+   		ob_end_clean(); // clear the buffer
+
+			echo $posts_html;
+
+
+    exit;
+}
+
+add_action('wp_ajax_nopriv_more_post_ajax', 'more_post_ajax');
+add_action('wp_ajax_more_post_ajax', 'more_post_ajax');
