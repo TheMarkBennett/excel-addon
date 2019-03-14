@@ -10,7 +10,7 @@
 
 
  //include gems shortcode
- include( plugin_dir_path( __FILE__ ) . 'include/gems-shortcode.php');
+// include( plugin_dir_path( __FILE__ ) . 'include/gems-shortcode.php');
 
 
  //Include ACF Javascript
