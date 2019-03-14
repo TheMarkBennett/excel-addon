@@ -56,10 +56,9 @@
       <?php  if($counter % 4 == 0){?>
       </div>
         <div class="row">
+<?php}
 
-<?php
 $counter++;
-}
 
 }?>
 
