@@ -23,7 +23,7 @@ function update_pages_on_change(){
 			 url: gems_ajax_object.ajax_url,
 			 type: 'post',
 			 data: {
-					 'action':'more_post_ajax',
+					 'action':'load_gems_ajax',
 					 'post_type': $post_type
 			 },
 			 success: function( response ) {
