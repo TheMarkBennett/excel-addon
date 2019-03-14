@@ -1,9 +1,15 @@
 $(document).ready(function(){
 
-update_pages_on_change();
+var $term = 'gems-2018';
+
+update_pages_on_change($term);
 
 $('.gems-past').on('click', 'li', function() {
      console.log($(this).html());
+    $term = $(this).attr('class');
+     update_pages_on_change($term);
+
+
 });
 
 
@@ -14,7 +20,7 @@ $('.gems-past').on('click', 'li', function() {
 
 
 
-function update_pages_on_change(){
+function update_pages_on_change(term){
 
   var $post_type = 'person';
   //console.log(post_type); cpt_template-admin-js
@@ -24,7 +30,8 @@ function update_pages_on_change(){
 			 type: 'post',
 			 data: {
 					 'action':'load_gems_ajax',
-					 'post_type': $post_type
+					 'post_type': $post_type,
+           'slug': $term,
 			 },
 			 success: function( response ) {
 					 console.log(response);

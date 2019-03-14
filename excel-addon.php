@@ -30,7 +30,7 @@
 
 
  function load_gems_ajax(){
-        $post_type = $_POST["post_type"];
+        $gems_term = $_POST["term"];
     header("Content-Type: text/html");
 
     $counter = 0;
@@ -43,7 +43,7 @@
             array (
                 'taxonomy' => 'people_group',
                 'field' => 'slug',
-                'terms' => 'gems-2018',
+                'terms' => $gems_term,
                 )
             ),
     );
