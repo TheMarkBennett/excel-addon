@@ -36,8 +36,7 @@ $('#gems-archive').fadeOut(500).delay(500).empty();
 					 'post_type': $post_type,
            'slug': $term,
 			 },
-			 success: function( response ) {
-					 console.log(response);
+			 success: function( response ) {					
 					 $('#gems-archive').hide().append(response).fadeIn(1000);
 			 },
 	 });
