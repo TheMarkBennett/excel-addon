@@ -38,7 +38,8 @@
 
     $args = array(
         'post_type' => 'person',
-        'posts_per_page' => 12,
+        'orderby' => 'title',
+        'posts_per_page' => -1,
         'tax_query' => array(
             array (
                 'taxonomy' => 'people_group',
@@ -56,8 +57,8 @@
     while ($loop->have_posts()) { $loop->the_post(); ?>
 
 			<div class="post-<?php the_ID(); ?> gems-person col-12 col-sm-2 col-md-3 text-center">
-        <?php the_post_thumbnail( 'thumbnail' ); ?>
-        <p><?php the_title(); ?></p>
+        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+        <a href="<?php the_permalink(); ?>"><p><?php the_title(); ?></p></a>
       </div>
 
       <?php if (($counter + 1) % 4 == 0) {?>

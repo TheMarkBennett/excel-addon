@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-var $term = 'gems-2018';
+var $term = 'gems-2017';
 
 update_pages_on_change($term);
 
