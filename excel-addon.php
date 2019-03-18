@@ -39,6 +39,7 @@
     $args = array(
         'post_type' => 'person',
         'orderby' => 'title',
+        'order'   => 'DESC',
         'posts_per_page' => -1,
         'tax_query' => array(
             array (
