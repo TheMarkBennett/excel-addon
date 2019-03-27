@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  //$('#excel-people').find( ".ucf-post-list-item" ).removeClass('col-xl-2');
+  $('#excel-people').find( ".ucf-post-list-item" ).removeClass('col-xl-2');
 
 
 });
