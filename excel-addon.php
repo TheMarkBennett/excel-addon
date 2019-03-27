@@ -13,6 +13,16 @@
 // include( plugin_dir_path( __FILE__ ) . 'include/gems-shortcode.php');
 
 
+//include javascript to remove col-xl-2 from people plugin
+ function excel_people_plugin_scripts() {
+
+     wp_enqueue_script( 'excel_people_js', plugin_dir_url( __FILE__ ) . 'assets/js/excel-people.js', array(), '1.0.0', true );
+}
+add_action('wp_enqueue_scripts', 'excel_people_plugin_scripts');
+
+
+
+
  //Include ACF Javascript
  function gems_enqueue_scripts() {
 
@@ -26,7 +36,7 @@
 
  }
 
- add_action('wp_enqueue_scripts', 'gems_enqueue_scripts'); //add javascript to the admin ares
+ add_action('wp_enqueue_scripts', 'gems_enqueue_scripts'); //add javascript to the admin areas
 
 
  function load_gems_ajax(){
